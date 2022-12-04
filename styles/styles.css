@@ -1,0 +1,747 @@
+/*-- Text and Links ------------*/
+html {
+    scroll-behavior: smooth;
+  }
+body {
+    margin: 0;
+    background-color: #0C1821;
+}
+h1, h2, h3, h4 {
+    font-family: oswald, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+}
+h1 {
+    margin-top: 0;
+    font-size: 4em;
+}
+h2 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+h3 {
+    font-size: 1.8em;
+}
+p, a, label, li, i {
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.8rem;
+}
+p:not(:first-child) {
+    margin-top: 10px;
+}
+i {
+    font-style: italic;
+}
+p, i {
+    line-height: 1.5em;
+    font-size: 1.2em;
+}
+code {
+    font-size: 1.1em;
+}
+ul {
+    list-style-type: none;
+}
+
+/*-- Links ------------*/
+a {
+    color: white;
+    text-decoration: underline;
+}
+a:hover a:visited {
+    color: white;
+}
+
+/*-- Hover Effect ------------*/
+input:focus, 
+select:focus, 
+textarea:focus, 
+.testimonial:hover, 
+.author:hover {
+    transition: 0.3s;
+    box-shadow: 0px 0px 0px 6px rgba(43, 88, 122, 0.5);
+}
+
+/*-- Animation Effect ------------*/
+h1, h2, h3, h4, p, i, a, img, form {
+    animation: 0.3s ease-out 0s 1 scaleUp;
+}
+@keyframes scaleUp {
+    0% {
+        transform: scale(50%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+
+
+/*-- Buttons ------------*/
+button, input[type=submit] {
+    background-color: rgba(0, 0, 0, 0.0);
+    padding: 15px 25px;
+    border-width: 3px;
+    border-style: solid;
+    margin: 20px auto;
+    font-size: 1.2em;
+    border-radius: 30px;
+}
+button, input[type=submit]:hover {
+    cursor: pointer;
+}
+.btn-light {
+    border-color: #0C1821;
+    color: #0C1821;
+}
+.btn-light:hover {
+    background-color: #0C1821;
+    border-color: #0C1821;
+    color: white;
+}
+.btn-dark {
+    border-color: white;
+    color: white;
+}
+.btn-dark:hover {
+    background-color: white;
+    border-color: white;
+    color: #0C1821;
+}
+.btn-light:hover, .btn-dark:hover {
+    transition: 0.3s;
+}
+
+/*-- Forms ------------*/
+input[type=text], input[type=tel], select, textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+/*-- Navigation Menu ------------*/
+nav {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    padding: 50px 10%;
+}
+.nav-bar-background {
+    height: 140px;
+}
+.nav-menu-overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.3s;
+}
+.nav-menu-overlay a {
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.nav-menu-overlay a:not(.closebtn) {
+    padding: 0 5px;
+    font-size: 2em;
+}
+.nav-menu-overlay a,
+.nav-menu-overlay li {
+    color: #818181;
+}
+.nav-menu-overlay a:hover, 
+.nav-menu-overlay li:hover, 
+.active {
+    color: white;
+    transition: 0.3s;
+}
+.nav-menu-overlay a:visited,
+.nav-menu-overlay li:visited {
+    color: #818181;
+}
+.nav-menu-overlay a .active {
+    color: white;
+}
+.closebtn {
+    position: absolute;
+    top: 50px;
+    right: 10%;
+    font-size: 4em;
+}
+.nav-menu {
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    width: 100%;
+    text-align: right;
+}
+
+/*-- Logo and Burger ------------*/
+#logo {
+    float: left;
+    height: 40px;
+    width: 40px;
+    background-image: url("../img/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.burger-icon, .burger-icon:visited {
+    display: block;
+    float: right;
+    font-size: xx-large;
+    color: white;
+}
+
+/*-- Photography Rights ------------*/
+.photographer {
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 8px;
+    border-radius: 0 10px 0 0;
+    font-size: 0.6em;
+    color: darkgray;
+}
+.multi-column-section .photographer {
+    border-radius: 0 10px 0 10px;
+}
+
+/*-- Header Images ------------*/
+#heading-image-index {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/eksterior.jpg");
+}
+#heading-image-menu {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/maaltid.jpg");
+}
+#heading-image-pudo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/oslo.png");
+}
+#heading-image-reservations {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/interior.jpg");
+}
+#heading-image-ruter {
+    background-image: url("../img/selkjørende.jpg");
+}
+#heading-image-code {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/code.png");
+}
+
+/*-- Sections ------------*/
+section {
+    position: relative;
+    padding: 50px 10%;
+}
+
+/*-- Hero Image Section ------------*/
+.hero-image {
+    position: relative;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    color: white;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+/*-- Light Section ------------*/
+.section-light {
+    background-color: white;
+    color: #0C1821;
+}
+.section-light a {
+    color: #0C1821;
+}
+.section-light a:hover, .section-light a:visited {
+    color: #132736;
+}
+/*-- Dark Section ------------*/
+.section-dark {
+    background: rgb(12,24,33);
+    background: linear-gradient(0deg, rgba(12,24,33,1) 0%, rgba(19,39,54,1) 100%);
+    color: white;
+}
+
+/*-- Code Sub Section ------------*/
+.code-block-dark,
+.code-block-light {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.code-block-dark {
+    background-color: #132736;
+}
+.code-block-light {
+    background-color: white;
+}
+.code-white {
+    color: white;
+}
+.code-comment-light {
+    color: #ccc;
+}
+.code-green-light {
+    color: rgb(106, 209, 3);
+}
+.code-red-light {
+    color: rgb(251, 21, 67);
+}
+.code-blue-light {
+    color: deepskyblue;
+}
+.code-green-dark {
+    color: rgb(25, 102, 25);
+} 
+.code-red-dark {
+    color: firebrick;
+} 
+.code-blue-dark {
+    color: midnightblue;
+} 
+
+/*-- Fullwidth Section ------------*/
+.section-fullwidth {
+    padding: 0;
+    margin: 0;
+}
+
+/*-- Multi Column Section ------------*/
+.multi-column-section {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+.two-column-full-width {
+    margin: auto;
+}
+.two-column {
+    position: relative;
+    flex: 1 auto;
+    box-sizing: border-box;
+}
+.section-whitespace-min:not(:last-child) {
+    padding-bottom: 50px;
+}
+.section-whitespace-min:nth-child(n+3) {
+    padding-top: 0;
+}
+.section-whitespace-min h2 {
+    margin-bottom: 0;
+}
+#dish-image, #code-image-1, #code-image-2 {
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+#code-image-1, #code-image-2 {
+    box-sizing: border-box;
+    border: 2px solid #0C1821;
+    margin: 10px 0;
+}
+
+/*-- Contact Sub-Section ------------*/
+.section-contact {
+    display: flex;
+    flex-direction: column;
+}
+.contact-about {
+    width: 100%;
+}
+.contact-info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.contact-info-element {
+    min-width: 200px;
+    border: 2px solid #0C1821;
+    margin: 20px 10px 0;
+    text-align: center;
+    border-radius: 10px;
+    scroll-snap-align: center;
+}
+.contact-info-element h3 {
+    font-size: 1.3em
+}
+.contact-info-element p {
+    font-size: 1em;
+}
+.icon-margin-right {
+    padding-right: 10px;
+}
+
+/*-- Testimonials Section ------------*/
+.testimonial-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.testimonial {
+    min-width: 200px;
+    background-color: #132736;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 0.8em;
+    scroll-snap-align: center;
+}
+.fa-quote-right {
+    float: right;
+}
+
+/*-- Star Rating ------------*/
+.checked {
+    color: #ffc300;
+}
+
+/*-- PUDO Case Featured Section ------------*/
+.section-featured {
+    padding-top: 250px;
+}
+.featured {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin: 0 10%;
+}
+
+/*-- PUDO Case Steps Section ------------*/
+.step h4 {
+    font-size: 1.5em;
+}
+.step-desc p {
+    margin-bottom: 0;
+}
+
+/*-- Author Section ------------*/
+.section-author {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background: #0C1821;
+    padding: 0 10%;
+    margin: auto;
+}
+.section-author h3, h4, p {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.section-author h3 {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+.author {
+    position: relative;
+    height: 100px;
+    width: 300px;
+    background: #132736;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+}
+.author-info {
+    float: right;
+    margin-top: 0;
+    text-align: right;
+}
+.author-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    float: left;
+    width: 110px;
+    height: 140px;
+    background-image: url("../img/profile.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+}
+.author-socials {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    float: right;
+}
+.author-socials a, .author-socials a:hover, .author-socials a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/*-- Social Links ------------*/
+.author .fa {
+    width: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 2px 2px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+.author .fa:hover {
+    transition: 0.3s;
+}
+.author .fa {
+    border-width: 2px;
+    border-style: solid;
+}
+.fa-linkedin {
+    border-color: #007bb5;
+}
+.fa-linkedin:hover {
+    background: #007bb5;
+}
+.fa-twitter {
+    border-color: #55ACEE;
+}
+.fa-twitter:hover {
+    background: #55ACEE;
+}
+.fa-facebook {
+    border-color: #3B5998;
+}
+.fa-facebook:hover {
+    background: #3B5998;
+}
+.fa-snapchat-ghost {
+    border-color: #fffc00;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fa-snapchat-ghost:hover {
+    background: #fffc00;
+}
+
+/*-- Restaurant Menu Styles ------------*/
+.dish-section {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+.dish {
+    width: 70%;
+}
+.dish-price {
+    float: right;
+    font-size: 1.5em;
+    font-style: italic;
+}
+.dish-title {
+    margin: 0 0 10px;
+    text-align: left;
+}
+.dish-details {
+    font-style: italic;
+}
+.badge{
+    position: relative;
+    top: -10px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+}
+.section-light .badge {
+    background-color: #0C1821;
+    color: white;
+}
+.section-dark .badge {
+    background-color: white;
+    color: #0C1821;
+}
+
+/*-- Footer Section ------------*/
+footer {
+    display: flex;
+    flex-flow: column;
+    background-color: #0C1821;
+    padding: 40px 10%;
+    color: white;
+    text-align: center;
+}
+footer a:not(.to-top a) {
+    text-decoration: none;
+}
+
+/*-- @Media - Screen width greater than 800px ------------*/
+@media (min-width: 800px) {
+    /*-- Text and Links ------------*/
+    h2 {
+        font-size: 3em;
+    }
+
+    /*-- Navigation Menu ------------*/
+    .nav-bar-background {
+        height: 150px;
+    }
+
+    /*-- Logo and Burger ------------*/
+    #logo {
+        height: 50px;
+        width: 50px;
+        margin-left: 0;
+    }
+
+    /*-- General Sections ------------*/
+    section {
+        padding: 50px 20%;
+    }
+
+    /*-- Header Image Section ------------*/
+    .background-fixed {
+        background-attachment: fixed;
+    }
+
+    /*-- Multi Column Section ------------*/
+    .multi-column-section {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 100px 10% 100px;
+    }
+    .two-column-full-width {
+        width: 100%;
+    }
+    .two-column {
+        flex: 1;
+        box-sizing: border-box;
+    }
+    .two-column:first-child {
+        padding-right: 50px;
+    }
+    .two-column:last-child {
+        padding-left: 50px;
+    }
+    .two-column h3 {
+        text-align: left;
+    }
+
+    /*-- Contact Sub-Section ------------*/
+    .section-contact {
+        flex-direction: row;
+        padding: 70px 10%;
+    }
+    .contact-about {
+        width: 70%;
+        padding-right: 10%;
+    }
+    .contact-about h2,
+    .contact-about p {
+        text-align: right;
+    }
+    .contact-about a {
+        float: right;
+    }
+    .contact-info {
+        flex-direction: column;
+        width: 20%;
+        overflow-x: visible;
+    }
+    .contact-info-element {
+        width: 100%;
+        border: none;
+        margin: 0;
+        text-align: left;
+    }
+    .contact-info h3,
+    .contact-info p {
+        font-size: 1em;
+    }
+    .contact-info h3 {
+        text-align: left;
+    }
+    .contact-info p {
+        padding-bottom: 20px;
+    }
+
+    /*-- Testimonials Section ------------*/
+    .section-testimonial {
+        padding: 50px 10%;
+    }
+    .testimonial {
+        min-width: 400px;
+        font-size: 1em;
+    }
+
+    /*-- PUDO Case Featured Section ------------*/
+    .featured {
+        top: -130px;
+        padding: 50px 50px;
+    }    
+
+    /*-- PUDO Case Steps Section ------------*/
+    .step {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 50px;
+    }
+    .step-index {
+        min-width: 100px;
+        text-align: left;
+    }
+    .step-index h3 {
+        margin: 0;
+        font-size: 8em;
+    }
+    .step-desc h4 {
+        font-size: 1.6em;
+        text-align: left;
+    }
+
+    /*-- Author Section ------------*/
+    .section-author {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 0 20%;
+    }
+    .author-container {
+        margin-top: 20px;
+    }
+    .author {
+        width: 300px;
+    }
+
+    /*-- Footer Section ------------*/
+    footer {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 40px 20%;
+        text-align: left;
+    }
+    .to-top {
+        min-width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+}

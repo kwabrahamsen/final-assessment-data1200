@@ -1,0 +1,258 @@
+<html lang="nb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <meta name = "theme-color" content = "#0C1821">
+        
+        <!-- iOS, iPadOS, MacOS icons, ref.: Apple Developer/Safari Web Content Guide/https://tinyurl.com/2exrbhrz -->
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Inkluderer stylesheet, ikoner, og Adobe Fonts-->
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.typekit.net/lpa5jqg.css">
+        
+        <title>New Wave | Accessibility</title>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header id="top">
+            <nav>
+                    
+                <!-- Overlay menu section -->
+                <div id="nav-menu-overlay" class="nav-menu-overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <ul class="nav-menu">
+                        <a href="index.html"><li>Hjem</li></a>
+                        <a href="menu.html"><li>Vår meny</li></a>
+                        <a href="contact-us.html"><li>Kontakt oss</li></a>
+                        <a href="accessibility.html"><li class="active">Accessibility</li></a>
+                        <a href="topical.html"><li>PUDO-case</li></a>
+                    </ul>
+                </div>
+
+                <!-- Logo -->
+                <a href="index.html"><div id="logo"></div></a>
+                
+                <!-- Burger icon -->
+                <a href="javascript:void(0);" class="burger-icon" onclick="openNav()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Header Image Section -->
+            <div class="nav-bar-background"></div>
+
+            <!-- Automated Test Section -->
+            <section class="section-light multi-column-section section-whitespace-min">
+                <div class="two-column-full-width">
+                    <h1>Kodebeslutninger</h1>
+                </div>
+
+                <!-- Full width -->
+                <div class="two-column-full-width">
+                    <h2>Automatisk test</h2>
+                    <p>Den automatiske testen gir kun to feil, som beror på at anker-elementene som inneholder logo og meny-burger ikke har noen tekst, men siden disse inneholder visuelle elementer ignorerer jeg disse feilvarslingene.</p>
+                    <p>Testen oppgir også at siden inneholder språkdefinering og den lar skjermlesere ignorere ikoner som følger:</p>
+                    <div class="code-block-dark">
+                        <code class="code-blue-light">
+                            <code class="code-comment-light">&lt;!-- Definerer språket siden er skrevet i --&gt;</code><br>
+                            <code class="code-green-light">&lt;html</code> lang="nb"<code class="code-green-light">&gt;</code><br>
+                            <code class="code-comment-light">&lt;!-- Gjør at skjermlesere ignorerer ikoner --&gt;</code><br>
+                            <code class="code-green-light">&lt;span</code> aria-hidden="true"<code class="code-green-light">&gt;</code>
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Two Column -->
+                <div class="two-column">
+                    <h3>Testrapport</h3>
+                    <img id="code-image-1" src="img/code-1.png" alt="Skjermdump fra en autmatisk test for tilrettelegging av nettside">
+                    
+                    <!-- Bilder -->
+                    <h3>Bilder</h3>
+                    <p>Alternativ tekst er også oppgitt på bilder som ikke er overskriftsbilder, men som er del av innholdet, og disse bildene er også hentet med html i stedet for css slik at de blir lastet selv om webklienten ikke laster styles.</p>
+                </div>
+
+                <!-- Two Column -->
+                <div class="two-column">
+                    <!-- Kontrastnivå -->
+                    <h3>Kontrastnivå</h3>
+                    <p>Ifølge w3schools som refererer til Apple, anbefales det en kontrastrate på minimum 4.5, helst 7. Dette nettstedet scorer 8.59.</p>
+                    <img id="code-image-2" src="img/code-2.png" alt="Skjermdump fra automatisk test av kontrastnivå">
+                   
+                    <!-- Struktur -->
+                    <h3>Struktur</h3>
+                    <p>Siden er strukturert etter hovedelementene header, main og footer, deretter inndelt etter med nav, section og hierarkiske headers.</p>
+                    <div class="code-block-dark">
+                        <code class="code-green-light">
+                            <code>&lt;html&gt;</code><br>
+                            <code style="padding-left:20px;">&lt;header&gt;</code><br>
+                            <code style="padding-left:40px;">&lt;nav&gt;</code><br>
+                            <code style="padding-left:20px;">&lt;main&gt;</code><br>
+                            <code style="padding-left:40px;">&lt;section&gt;</code><br>
+                            <code style="padding-left:20px;">&lt;footer&gt;</code><br>
+                        </code>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CSS Section -->
+            <section class="section-light multi-column-section section-whitespace-min">
+                
+                <!-- Full Width -->
+                <div class="two-column-full-width">
+                    <h2>CSS</h2>
+                </div>
+
+                <!-- Full Width -->
+                <div class="two-column-full-width">
+                    <!-- Responsivitet -->
+                    <h3>Responsivitet</h3>
+                    <p>Hva gjelder CSS-en så er den bygget opp «mobile first», og deretter skaleres den opp med <code class="code-red-dark">@media</code> query. Koden bryter kun på ett punkt siden det aldri er mer enn to kolonner og dermed ikke behov for ytterligere brytningspunkter. </p>
+                    <div class="code-block-dark">
+                        <code class="code-blue-light">
+                            <code class="code-red-light">
+                                @media</code> (min-width: 800<code class="code-red-light">px</code>) {<br>
+                                }
+                        </code>
+                    </div>
+                    <p>Det er også bevisst valgt at noen av selectorene er relative og nested slik at om man ville byttet en seksjon fra lys til mørk så endres også fargene på <code class="code-green-dark">&lt;p&gt;</code>, <code class="code-green-dark">&lt;h#&gt;</code> og <code class="code-green-dark">&lt;a&gt;</code> også automatisk. Andre elementer som knapper og kode-blokker, som man muligens vil ha mer styring på selv er designet med mulighet for å selv velge når man vil bruke mørk og lys variant, eksempelvis:</p>
+                    <div class="code-block-dark">
+                        <code class="code-blue-light">
+                            <code class="code-comment-light">/*Relativ selector*/</code><br>
+                            .section-light <code class="code-green-light">a</code> {<br>
+                            color: #0C1821;<br>
+                            }<br>
+                            <code class="code-comment-light">/*Manuelt fargevalg*/</code><br>
+                            .code-blue-light {<br>
+                            color: deepskyblue;<br>
+                            }<br>
+                            .code-blue-dark {<br>
+                            color: midnightblue;<br>
+                            }
+                        </code>
+                    </div>
+
+                    <!-- Struktur av properties -->
+                    <h3>Strukturering av properties</h3>
+                    <p>Stylesheetet er bygget opp etter seksjoner og selvforklarende navngitte selektorer uten å dele det opp i strukturelle og visuelle deler, da jeg mener at i dette tilfellet er koden oversiktlig og kommentert nok som det er. Selektorenes properties er kategorisert som vist i kodeboksen under, og i én samlet fil.</p>
+                    <div class="code-block-dark">
+                        <code class="code-blue-light">
+                            <code class="code-comment-light">/*Display*/</code><br>
+                            display: flex;<br>
+                            flex-flow: row nowrap;<br>
+                            <code class="code-comment-light">/*Posisjonering*/</code><br>
+                            position: absolute;<br>
+                            bottom: 0<code class="code-red-light">px</code><br>
+                            left: 0<code class="code-red-light">px</code><br>
+                            <code class="code-comment-light">/*Box-model*/</code><br>
+                            height: 400<code class="code-red-light">px</code>;<br>
+                            width: 400<code class="code-red-light">px</code>;<br>
+                            background-color: #FFF;<br>
+                            padding-left: 10<code class="code-red-light">%</code>;<br>
+                            border: 2<code class="code-red-light">px</code> solid #000;<br>
+                            margin: 30<code class="code-red-light">px</code><br>
+                            <code class="code-comment-light">/*Typografi*/</code><br>
+                            color: #000;<br>
+                            font-family: oswald, sans-serif;<br>
+                            font-weight: 500;<br>
+                            <code class="code-comment-light">/*Manipulasjon*/</code><br>
+                            transition: 0.3<code class="code-red-light">s</code>;<br>
+                            <code class="code-comment-light">/*Annet*/</code><br>
+                            box-shadow: 0<code class="code-red-light">px</code> 0<code class="code-red-light">px</code> 0<code class="code-red-light">px</code> 6<code class="code-red-light">px</code> rgba(43, 88, 122, 0.5);<br>
+                        </code>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Annet Section -->
+            <section class="section-light multi-column-section section-whitespace-min">
+                
+                <!-- Full Width -->
+                <div class="two-column-full-width">
+                    <h2>Annet</h2>
+
+                    <!-- Forms -->
+                    <h3>Forms</h3>
+                    <p>Kontaktskjemaet gjør ikke noe aktivt men er klart til å tas i bruk. Tekst og tilhørende input-felt er lenket opp mot hverandre slik at feltet aktiveres om man klikker tilhørende tekst og slik at skjermlesere vet hvilken tekst som hører til hvilket felt. I tillegg er input type i feltet for telefonnummer satt til «tel» slik at på enheter med touch-tastaturer vil det trigge tastatur-oppsett for inntasting av telefonnummer med nummerisk tastatur og "*, #, +".</p>
+                    <div class="code-block-dark">
+                        <code class="code-blue-light">
+                            <code class="code-green-light">&lt;label</code> for="phone"<code class="code-green-light">&gt;</code><code class="code-white">Telefon:</code><code class="code-green-light">&lt;/label&gt;</code><br>
+                            <code class="code-green-light">&lt;input</code> type="tel" id="phone" name="phone" placeholder="Ditt telefonnummer"<code class="code-green-light">&gt;</code>
+                        </code>
+                    </div>
+
+                    <!-- Lenker -->
+                    <h3>Lenker</h3>
+                    <p>Nettstedet drar også nytte av lenker med ulike typer lenkemål. Det benyttes lenker med ordinært eksternmål, internlenker til andre sider på nettstedet og ankermål lenket til et id-element på siden, eksempelvis "til topp". Når det gjelder kontaktinformasjon er lenkene på telefonnummer satt til å trigge et oppringt til gitt nummer, epost-lenke er satt til å åpne standard epostapp med epost-adresse fylt inn, samt adresse lenket til Google Maps slik at potensielle kunder lettest mulig kan starte veibeskrivelse rett til restauranten.</p>
+                    <div class="code-block-dark">
+                        <code class="code-blue-light">
+                            <code class="code-comment-light">&lt;!-- Lokalt med ankerpunkt --&gt;</code><br>
+                            <code class="code-green-light">&lt;a</code> href="index.html#top"<code class="code-green-light">&gt;</code><code class="code-white">Til Topp</code><code class="code-green-light">&lt;/a&gt;</code><br>
+                            <code class="code-comment-light">&lt;!-- Telefonnummer --&gt;</code><br>
+                            <code class="code-green-light">&lt;a</code> href="tel:+47########"<code class="code-green-light">&gt;</code><code class="code-white">Telefon</code><code class="code-green-light">&lt;/a&gt;</code><br>
+                            <code class="code-comment-light">&lt;!-- Google Maps i ny fane--&gt;</code><br>
+                            <code class="code-green-light">&lt;a</code> href="https://goo.gl/maps/---" target="_blank"<code class="code-green-light">&gt;</code><code class="code-white">Adresse</code><code class="code-green-light">&lt;/a&gt;</code><br>
+                            <code class="code-comment-light">&lt;!-- Epost --&gt;</code><br>
+                            <code class="code-green-light">&lt;a</code> href="mailto:@"<code class="code-green-light">&gt;</code><code class="code-white">Epost</code><code class="code-green-light">&lt;/a&gt;</code><br>
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Two Column Width -->
+                <div class="two-column">
+                    
+                </div>
+
+                <!-- Two Column Width -->
+                <div class="two-column">
+                    
+                </div>
+            </section>
+
+            <!-- Gjestereisen Section -->
+            <section class="section-light multi-column-section section-whitespace-min">
+                
+                <!-- Full Width -->
+                <div class="two-column-full-width">
+                    <h2>Gjestereisen</h2>
+                    <p>Nettsiden legger også opp en ønsket gjestereise gjennom siden med ønske om konverteringer. Fra index.html får man først opp kort info om restauranten med en minimalistisk lenke til mer informasjon. Målet er å få gjesten til å scrolle seg videre og bli overbevist av tilbakemeldinger og menyen før de presenteres med en call to action som tar dem til kontakt-skjemaet. Alle ønskede handlinger er i form av buttons, mens andre muligheter er bare enkelt lenket. Gjennom hele nettstedet vil man bli geleidet til kontaktskjemaet uansett hvilken rute man tar slik at ikke gjesten selv må oppsøke kontaktinformasjonen, men heller blir presentert den uansett klikkvalg.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-item">
+                <h3>Kontakt oss</h3>
+                <p><a href="https://goo.gl/maps/CPZzrJfY9QcTfwHS6" target="_blank">Waldemars Hage 4<br>0175 Oslo</a></p>
+                <p><a href="mailto:kw.abrahamsen@icloud.com">kw.abrahamsen@icloud.com</a><br><a href="tel:+4790212080">90 21 20 80</a></p>
+            </div>
+            <div class="footer-item">
+                <h3>Åpningstider</h3>
+                <p>Søn - Ons: 12.00-00.00<br>Tor - Lør: 12.00-03.00</p>
+            </div>
+            <div class="to-top">
+                <a href="#top">Til toppen</a>
+            </div>
+        </footer>
+        <script>
+            function openNav() {
+                document.getElementById("nav-menu-overlay").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("nav-menu-overlay").style.width = "0%";
+            }
+        </script>
+    </body>
+</html>

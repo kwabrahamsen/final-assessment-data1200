@@ -1,0 +1,157 @@
+<html lang="nb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <meta name = "theme-color" content = "#0C1821">
+        
+        <!-- iOS, iPadOS, MacOS icons, ref.: Apple Developer/Safari Web Content Guide/https://tinyurl.com/2exrbhrz -->
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Inkluderer stylesheet, ikoner, og Adobe Fonts-->
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.typekit.net/lpa5jqg.css">
+        
+        <title>New Wave | Reservasjoner</title>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header id="top">
+            <nav>
+                    
+                <!-- Overlay menu section -->
+                <div id="nav-menu-overlay" class="nav-menu-overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <ul class="nav-menu">
+                        <a href="index.html"><li>Hjem</li></a>
+                        <a href="menu.html"><li>Vår meny</li></a>
+                        <a href="contact-us.html"><li class="active">Kontakt oss</li></a>
+                        <a href="accessibility.html"><li>Accessibility</li></a>
+                        <a href="topical.html"><li>PUDO-case</li></a>
+                    </ul>
+                </div>
+
+                <!-- Logo -->
+                <a href="index.html"><div id="logo"></div></a>
+                
+                <!-- Burger icon -->
+                <a href="javascript:void(0);" class="burger-icon" onclick="openNav()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Header Image Section -->
+            <div id="heading-image-reservations" class="background-fixed hero-image">
+                <div class="photographer"><i>&copy; Andrew Seaman, Unsplash</i></div>
+                <div class="hero-text">
+                    <p>La oss være vertskap</p>
+                    <h1>Om restauranten</h1>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <section class="section-light section-contact">
+                <div class="contact-about">
+                    <h2>Dette er oss</h2>
+                    <p>Velkommen til New Wave! Vår restaurant, flott plassert i hjertet av Oslo, tilbyr kulinariske opplevelser i toppklasse, i en elegant og moderne atmosfære. Fra kjøkkenet serveres smaker du kjenner, og smaker du ikke kjenner, med et ønske om å utvide smakshorisonter. </p>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-info-element">
+                        <h3><span class="fa fa-phone icon-margin-right" aria-hidden="true"></span>Telefon</h3>
+                        <p><a href="tel:+4790212080">90 21 20 80</a></p>
+                    </div>
+                    <div class="contact-info-element">
+                        <h3><span class="fa fa-map-o icon-margin-right" aria-hidden="true"></span>Sted</h3>
+                        <p><a href="https://goo.gl/maps/CPZzrJfY9QcTfwHS6" target="_blank">Waldemars Hage 4<br>0175 Oslo</a></p>
+                    </div>
+                    <div class="contact-info-element">
+                        <h3><span class="fa fa-clock-o icon-margin-right" aria-hidden="true"></span>Åpningstider</h3>
+                        <p>Søn-Ons: 12.00-00.00<br>Tor-Lør: 12.00-03.00</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Occations Section -->
+            <section class="section-dark multi-column-section">
+                <div class="two-column">
+                    <h3>For alle anledninger</h3>
+                    <p>Ingen anledning er for stor, og ingen anledning for liten. Vi hjelper deg å arrangere milepælene gjennom livet, det være seg dåp, bursdager eller bryllup, samt de mindre, men vel så viktige øyeblikkene som en kveld med venner og god mat. For mindre selskaper kan det velges både a la carte eller satt meny og eventuelt vinpakke. Er selskapet ditt over 15 pers anbefaler vi satt meny, og vi setter oss gjerne ned med deg og planlegger sammen. Vi tilbyr også et stort utvalg øl og vin fra vår vinkjeller.</p>
+                </div>
+                <div class="two-column">
+                    <h3>I korte trekk</h3>
+                    <p>Vi holder til sentralt i Oslo i flotte moderne lokaler med mulighet for uteservering i naturskjønne omgivelser.</p>
+                    <p>Restauranten huser opptil 200 pers, med ytterligere 100 utendørs.</p>
+                    <p>Egen vinkjeller og lokalbryggeri.</p>
+                    <a href="#contact"><button class="btn-dark">Kontakt oss</button></a>
+                </div>
+            </section>
+
+            <!-- Reservations Section -->
+            <section class="section-light">
+
+                <div id="contact">
+                    <div>
+                        <h2>Reservasjoner og kontakt</h2>
+                        <p>Gjør din reservasjon i skjemaet under.</p>
+                    </div>
+                    <div class="form-container">
+                        <form>
+                            <label for="name">Navn:</label>
+                            <input type="text" id="name" name="name" placeholder="Ditt navn">
+
+                            <label for="phone">Telefon:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Ditt telefonnummer">
+
+                            <label for="request">Hva gjelder det?:</label>
+                            <select id="request" name="request">
+                                <option>Reservasjoner</option>
+                                <option>Generell henvendelse</option>
+                            </select>
+
+                            <label for="message">Melding:</label>
+                            <textarea id="message" name="message" placeholder="Din melding..." style="height: 200px"></textarea>
+
+                            <input class="btn-light" type="submit" value="Send">
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-item">
+                <h3>Kontakt oss</h3>
+                <p><a href="https://goo.gl/maps/CPZzrJfY9QcTfwHS6" target="_blank">Waldemars Hage 4<br>0175 Oslo</a></p>
+                <p><a href="mailto:kw.abrahamsen@icloud.com">kw.abrahamsen@icloud.com</a><br><a href="tel:+4790212080">90 21 20 80</a></p>
+            </div>
+            <div class="footer-item">
+                <h3>Åpningstider</h3>
+                <p>Søn - Ons: 12.00-00.00<br>Tor - Lør: 12.00-03.00</p>
+            </div>
+            <div class="to-top">
+                <a href="#top">Til toppen</a>
+            </div>
+        </footer>
+        <script>
+            function openNav() {
+                document.getElementById("nav-menu-overlay").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("nav-menu-overlay").style.width = "0%";
+            }
+        </script>
+    </body>
+</html>

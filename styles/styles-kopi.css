@@ -1,0 +1,715 @@
+/*-- Text and Links ------------*/
+html {
+    scroll-behavior: smooth;
+  }
+body {
+    margin: 0;
+    background-color: #0C1821;
+}
+h1, h2, h3, h4 {
+    font-family: oswald, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+h1 {
+    font-size: 3em;
+    margin-top: 0;
+}
+h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0;
+}
+h3 {
+    font-size: 2em;
+}
+p, a, label {
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.8rem;
+}
+i {
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+p, i {
+    line-height: 1.5em;
+    font-size: 1.2em;
+}
+.icon-margin-right {
+    padding-right: 10px;
+}
+/*-- Links ------------*/
+a {
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+    background-color: #0C1821;
+    transition: 0.3s;
+}
+a:visited {
+    color: white;
+}
+/*-- Buttons ------------*/
+button, input[type=submit] {
+    padding: 15px 25px;
+    margin: 10px auto;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 30px;
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+button, input[type=submit]:hover {
+    cursor: pointer;
+}
+.btn-light {
+    border-color: #0C1821;
+    color: #0C1821;
+}
+.btn-light:hover {
+    background-color: #0C1821;
+    border-color: #0C1821;
+    color: white;
+}
+.btn-dark {
+    border-color: white;
+    color: white;
+}
+.btn-dark:hover {
+    background-color: white;
+    border-color: white;
+    color: #0C1821;
+}
+.btn-light:hover, .btn-dark:hover {
+    transition: 0.3s;
+}
+
+/*-- Forms ------------*/
+input[type=text], input[type=tel], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input:focus, select:focus, textarea:focus {
+    box-shadow: 0px 0px 0px 6px rgba(43, 88, 122, 0.5);
+    transition: 0.3s;
+}
+
+/*-- Navigation Menu ------------*/
+#nav-bar {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+.nav-menu-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.nav-menu-overlay a:hover, .nav-menu-overlay a:focus {
+    color: #f1f1f1;
+}
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 10%;
+    font-size: 60px;
+}
+.nav-menu {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    padding-left: 0;
+}
+/*-- Logo and Burger ------------*/
+.icon {
+    color: white;
+    display: block;
+    font-size: xx-large;
+    float: right;
+}
+.icon:hover {
+    color: #ffc300;
+}
+.icon:visited {
+    color: white;
+}
+/*-- Logo ------------*/
+#logo {
+    background-image: url("../img/logo.png");
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+}
+
+/*-- Navigation Section ------------*/
+.nav-menu-overlay a, .nav-menu-overlay li {
+    list-style-type: none;
+    padding: 0 5px;
+    margin-bottom: 20px;
+    color: #818181;
+    transition: 0.3s;
+}
+.nav-menu-overlay li {
+    color: #818181;
+    font-size: xx-large;
+}
+.nav-menu-overlay a:hover, .nav-menu-overlay li:hover {
+    color: #f1f1f1;
+}
+.nav-menu-overlay a:visited, .nav-menu-overlay li:visited {
+    color: #818181;
+}
+.nav-menu-overlay a:focus, .nav-menu-overlay li:focus {
+    color: #f1f1f1;
+}
+.nav-menu-overlay a .active {
+    color: #f1f1f1;
+}
+
+/*-- Photography Rights ------------*/
+.photographer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    color: darkgray;
+    padding: 5px 8px;
+    border-radius: 0 5px 0 0;
+}
+.photographer i {
+    font-size: 0.8em;
+}
+
+/*-- General Sections ------------*/
+section {
+    padding: 50px 10%;
+    position: relative;
+}
+
+/*-- Header Image Section ------------*/
+#heading-image-index {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/siyuan-g_V2rt6iG7A-unsplash.jpg");
+}
+#heading-image-menu {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sebastian-coman-photography-dUqX2Eq-2jk-unsplash.jpg");
+}
+#heading-image-pudo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/oslo.png");
+}
+#heading-image-reservations {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/andrew-seaman-sQopSb2K0CU-unsplash.jpg");
+}
+#heading-image-ruter {
+    background-image: url("../img/selkjørende.jpg");
+}
+.hero-image {
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.hero-text p {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+/*-- Light Section ------------*/
+.section-light {
+    background-color: white;
+    color: #0C1821;
+}
+/*-- Dark Section ------------*/
+.section-dark {
+    background: rgb(12,24,33);
+    background: linear-gradient(0deg, rgba(12,24,33,1) 0%, rgba(19,39,54,1) 100%);
+    color: white;
+}
+.section-dark h2 {
+    color: white;
+}
+.section-dark a {
+    text-decoration: underline;
+}
+.section-dark a:hover {
+    color: #0C1821;
+    background-color: white;
+}
+.section-dark a:visited {
+    color: white;
+}
+/*-- Side Section ------------*/
+#menu-image {
+    background-image: url("../img/sebastian-coman-photography-dUqX2Eq-2jk-unsplash.jpg");
+}
+.side-image {
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.side-text {
+    width: 100%;
+}
+.section-side-right {
+    display: flex;
+    flex-flow: column;
+}
+.section-side-right h2 {
+    margin-top: 50px;
+}
+/*-- Fullwidth Section ------------*/
+.section-fullwidth {
+    margin: 0;
+    padding: 0;
+}
+/*-- Featured Section ------------*/
+.section-featured {
+    padding-top: 250px;
+}
+.featured {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px 30px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background-color: white;
+    border-radius: 10px;
+    color: #0C1821;
+}
+.featured h2 {
+    color: #0C1821;
+}
+/*-- Steps Section ------------*/
+.step-index {
+    text-align: center;
+}
+.step-desc h4 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4em;
+}
+.step-desc p {
+margin-bottom: 0;
+}
+
+/*-- Multi Column Section ------------*/
+.multi-column-container {
+    display: flex;
+    flex-flow: column;
+}
+.multi-column {
+    width: 100%;
+    padding-bottom: 10px;
+}
+/*-- Contact Section ------------*/
+.section-contact {
+    display: flex;
+    flex-direction: column;
+}
+.contact-about {
+    width: 100%;
+}
+.contact-about a {
+    padding-bottom: 15px;
+    float: left;
+}
+.contact-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.contact-info-element {
+    text-align: center;
+}
+.contact-info-element h3 {
+    font-size: 1.3em
+}
+.contact-info-element p {
+    font-size: 1em;
+}
+
+/*-- Testimonials Section ------------*/
+.testimonial-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.testimonial {
+    background-color: #132736;
+    border-radius: 10px;
+    font-size: 0.8em;
+    padding: 15px;
+    margin: 10px;
+    min-width: 200px;
+    scroll-snap-align: center;
+}
+.testimonial:hover {
+    box-shadow: 0px 0px 0px 6px rgba(43, 88, 122, 0.5);
+    transition: 0.3s;
+}
+.testimonial p {
+    margin-bottom: 0;
+}
+.fa-quote-right {
+    float: right;
+}
+
+/*-- Star Rating ------------*/
+.checked {
+    color: #ffc300;
+}
+
+/*-- Author Section ------------*/
+.section-author {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: auto;
+    padding: 0 10%;
+    background: #0C1821;
+}
+.section-author h3 {
+    text-align: center;
+}
+.author {
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    margin: 0 auto 20px;
+    height: 100px;
+    position: relative;
+}
+.author:hover {
+    box-shadow: 0px 0px 0px 6px rgba(43, 88, 122, 0.5);
+    transition: 0.3s;
+}
+.section-dark .author {
+    background: #132736;
+    color: white;
+}
+.author h4, .author p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.author-info {
+    float: right;
+    margin-top: 0;
+    text-align: right;
+}
+.author-image {
+    float: left;
+    background-image: url("../img/profile.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 110px;
+    height: 140px;
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.author-socials {
+    float: right;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.author-socials a, .author-socials a:hover, .author-socials a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/*-- Social Links ------------*/
+.author .fa {
+    color: white;
+    padding: 5px;
+    width: 15px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 2px;
+}
+.author .fa:hover {
+    transition: 0.3s;
+}
+.fa-linkedin {
+    border: 2px solid #007bb5;
+}
+.fa-linkedin:hover {
+    background: #007bb5;
+}
+.fa-twitter {
+    border: 2px solid #55ACEE;
+}
+.fa-twitter:hover {
+    background: #55ACEE;
+}
+.fa-facebook {
+    border: 2px solid #3B5998;
+}
+.fa-facebook:hover {
+    background: #3B5998;
+}
+.fa-snapchat-ghost {
+    border: 2px solid #fffc00;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fa-snapchat-ghost:hover {
+    background: #fffc00;
+}
+
+/*-- Restaurant Menu Styles ------------*/
+.menu-section {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin: auto;
+}
+.dish {
+    width: 70%;
+}
+.dish-price {
+    float: right;
+    font-size: 1.5em;
+    font-style: italic;
+    margin-top: 24px;
+}
+.dish-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.dish-details {
+    padding-left: 20px;
+    font-style: italic;
+}
+.emoji {
+    font-size: 0.6em;
+}
+
+#allergies {
+    color: #0C1821;
+    text-align: center;
+}
+.badge{
+    font-size: small;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 4px 8px;
+    text-align: center;
+    margin-left: 5px;
+}
+.section-light .badge {
+    background-color: #0C1821;
+    color: white;
+}
+.section-dark .badge {
+    background-color: white;
+    color: #0C1821;
+}
+
+/*-- Footer Section ------------*/
+footer {
+    display: flex;
+    flex-flow: column;
+    padding: 40px 10%;
+    background-color: #0C1821;
+    color: white;
+    text-align: center;
+}
+footer h3 {
+    color: white;
+}
+
+/*-- @Media - Screen width greater than 800px ------------*/
+@media (min-width: 800px) {
+    /*-- Text and Links ------------*/
+    h1 {
+        font-size: 4em;
+    }
+    h2 {
+        font-size: 3em;
+    }
+    /*-- General Sections ------------*/
+    section {
+        padding: 50px 20%;
+    }
+    /*-- Header Image Section ------------*/
+    .background-fixed {
+        background-attachment: fixed;
+    }
+    .hero-image {
+        height: 500px;
+    }
+    #logo {
+        height: 50px;
+        width: 50px;
+        margin-left: 0;
+    }
+    /*-- Side Section ------------*/
+    .section-side-right {
+        flex-flow: row;
+        padding: 70px 10%;
+    }
+    .section-side-right h2 {
+        text-align: left;
+        margin-top: 0;
+    }
+    .side-image {
+        height: 400px;
+        width: 50%;
+        background-position: 70% 50%;
+    }
+    .side-text {
+        width: 50%;
+        padding-left: 5%;
+    }
+    /*-- Contact Section ------------*/
+    .section-contact {
+        display: flex;
+        flex-direction: row;
+        padding: 70px 10%;
+    }
+    .contact-about {
+        width: 70%;
+        padding-right: 10%;
+    }
+    .contact-about h2 {
+        text-align: right;
+    }
+    .contact-about p {
+        text-align: right;
+    }
+    .contact-about a {
+        float: right;
+    }
+    .contact-info {
+        flex-direction: column;
+        width: 20%;
+    }
+    .contact-info-element {
+        width: 100%;
+        text-align: left;
+    }
+    .contact-info h3 {
+        font-size: 1em;
+    }
+    .contact-info p {
+        font-size: 1em;
+        padding-bottom: 20px;
+    }
+    /*-- Testimonials Section ------------*/
+    .section-testimonial {
+        padding: 50px 10%;
+    }
+    .testimonial {
+        min-width: 400px;
+        font-size: 1em;
+    }
+    /*-- Multi Column Section ------------*/
+    .multi-column-container .side-image {
+        width: 50%;
+    }
+    .multi-column-container {
+        flex-flow: row;
+    }
+    .multi-column h2 {
+        text-align: left;
+    }
+    .multi-column {
+        width: 50%;
+    }
+    .multi-column:first-child {
+        padding-right: 20px;
+    }
+    .multi-column:last-child {
+        padding-left: 20px;
+    }
+    /*-- Featured Section ------------*/
+    .featured {
+        padding: 50px 50px;
+        top: -130px;
+    }
+    /*-- Steps Section ------------*/
+    .step {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 50px;
+    }
+    .step-index {
+        min-width: 100px;
+        text-align: left;
+    }
+    .step-index h3 {
+        font-size: 8em;
+        margin: 0;
+    }
+    .step-desc h4 {
+        font-size: 1.6em;
+        text-align: left;
+    }
+    /*-- Author Section ------------*/
+    .section-author {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 0 20%;
+    }
+    .author-container {
+        margin-top: 20px;
+    }
+    .author {
+        width: 300px;
+    }
+    /*-- Footer Section ------------*/
+    footer {
+        padding: 40px 20%;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .to-top {
+        min-width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
